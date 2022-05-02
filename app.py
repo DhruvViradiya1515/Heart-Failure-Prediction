@@ -23,7 +23,7 @@ def predict():
             ix = cate_features.index(i)
             final_features.append(possible_features[ix].index(val.lower()))
         else:
-            final_features.append(int(val))
+            final_features.append(float(val))
 
     ytest = pd.DataFrame(np.reshape(final_features, (1,11)))
     ytest.columns = ['Age', 'Sex', 'ChestPainType', 'RestingBP', 'Cholesterol', 'FastingBS','RestingECG', 'MaxHR', 'ExerciseAngina', 'Oldpeak', 'ST_Slope']

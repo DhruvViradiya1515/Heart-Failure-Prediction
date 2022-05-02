@@ -6,7 +6,7 @@ from xgboost import XGBClassifier as XGB
 import pandas as pd
 import pickle
 
-df = pd.read_csv('./heart.csv')
+df = pd.read_csv('C:/Users/YASH MANIYA/Desktop/ml_deploy/Heart-Failure-Prediction/heart.csv')
 
 cate = ['Sex','ExerciseAngina','RestingECG','ChestPainType','ST_Slope']
 
