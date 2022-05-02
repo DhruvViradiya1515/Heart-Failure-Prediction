@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Failure Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <img src="https://miro.medium.com/max/1400/0*pEVAvMDQ_tnizfRV" alt="Heart Disease IMG">
+    <div class="login">
+        <h1>Heart Failure Prediction</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <!-- Age	Sex	ChestPainType	RestingBP	Cholesterol	FastingBS	RestingECG	MaxHR	ExerciseAngina	Oldpeak	ST_Slope -->
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="text" name="Age" placeholder="Age" required="required" />
+            <input type="text" name="Sex" placeholder="Sex" required="required" />
+            <input type="text" name="ChestPainType" placeholder="Chest Pain Type" required="required" />
+
+            <input type="text" name="RestingBP" placeholder="Resting BP" required="required" />
+            <input type="text" name="Cholesterol" placeholder="Cholesterol" required="required" />
+            <input type="text" name="FastingBS" placeholder="Fasting BS" required="required" />
+
+            <input type="text" name="RestingECG" placeholder="Resting ECG" required="required" />
+            <input type="text" name="MaxHR" placeholder="Max HR" required="required" />
+            <input type="text" name="ExerciseAngina" placeholder="Exercise Angina" required="required" />
+
+            <input type="text" name="Oldpeak" placeholder="Oldpeak" required="required" />
+            <input type="text" name="ST_Slope" placeholder="ST Slope" required="required" />
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+    </div>
+    <div class="pred">{{ prediction_text }}</div>
+
+</body>
+
+</html>
