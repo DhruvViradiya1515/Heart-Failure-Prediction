@@ -22,7 +22,10 @@ It has three major parts :
 2. app.py - This contains Flask APIs that receives employee details through GUI or API calls, computes the precited value based on our model and returns it.
 3. templates - This folder contains the HTML template to allow user to enter patient details and displays the predicted heart failure probability.
 
+Our final Model is in ENSEMBLE.py file
+
 ### Running the project
+
 1. Ensure that you are in the project home directory. Create the machine learning model by running below command -
 ```
 python model.py
@@ -57,3 +60,5 @@ Enter valid numerical values in all 11 input boxes in following format:
 Now hit the Predict button.
 If everything goes well, you should  be able to see the following output on the HTML page!
 ![alt text](./images/results.png)
+
+> Note : These steps are for deployment of model on localhost. You can also use Procfile to host it on Heroku Server.

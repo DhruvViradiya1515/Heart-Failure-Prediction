@@ -31,7 +31,7 @@ def predict():
     prediction = model.predict_proba(ytest)
     output = float(prediction[0][1])
 
-    return render_template('index.html', prediction_text=f'Heart Failure Probability : {output*100:.4f} %') 
+    return render_template('index.html', prediction_text=f'Heart Failure Probability : {output*100:.4f} %')# output*100:.4f
 
 if __name__ == "__main__":
     app.run(debug=True)
