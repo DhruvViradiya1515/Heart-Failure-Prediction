@@ -1,5 +1,7 @@
 pip==22.1
 Flask==2.1.2
+numpy
+pandas
 gunicorn==20.1.0
 lightgbm==3.3.2
 sklearn==0.0
