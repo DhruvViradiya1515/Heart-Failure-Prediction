@@ -5,4 +5,4 @@ pandas
 gunicorn
 lightgbm
 sklearn
-xgboost==1.5.2
+xgboost

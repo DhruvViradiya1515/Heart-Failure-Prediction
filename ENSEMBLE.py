@@ -1,6 +1,6 @@
 import numpy as np
 from xgboost import XGBClassifier as XGB
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from lightgbm import LGBMClassifier
 import pandas as pd
@@ -12,7 +12,6 @@ class ENSEMBLE():
         self.models = [XGB(n_estimators=400, max_depth=5),
                        RandomForestClassifier(random_state=0),
                        LGBMClassifier(),
-                       GradientBoostingClassifier(),
                        GaussianNB()]
     
     def fit(self, X, Y):
