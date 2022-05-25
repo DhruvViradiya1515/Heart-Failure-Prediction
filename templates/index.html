@@ -14,27 +14,89 @@
 </head>
 
 <body>
+    <h1 id="img_title">Heart Failure Prediction</h1>
     <img src="https://miro.medium.com/max/1400/0*pEVAvMDQ_tnizfRV" alt="Heart Disease IMG">
-    <div class="login">
-        <h1>Heart Failure Prediction</h1>
+    <div class="container">
+        <h1 id="instructions">Input from Patient's Lab Report</h1>
 
         <!-- Main Input For Receiving Query to our ML -->
         <!-- Age	Sex	ChestPainType	RestingBP	Cholesterol	FastingBS	RestingECG	MaxHR	ExerciseAngina	Oldpeak	ST_Slope -->
         <form action="{{ url_for('predict')}}" method="post">
-            <input type="text" name="Age" placeholder="Age" required="required" />
-            <input type="text" name="Sex" placeholder="Sex" required="required" />
-            <input type="text" name="ChestPainType" placeholder="Chest Pain Type" required="required" />
-
-            <input type="text" name="RestingBP" placeholder="Resting BP" required="required" />
-            <input type="text" name="Cholesterol" placeholder="Cholesterol" required="required" />
-            <input type="text" name="FastingBS" placeholder="Fasting BS" required="required" />
-
-            <input type="text" name="RestingECG" placeholder="Resting ECG" required="required" />
-            <input type="text" name="MaxHR" placeholder="Max HR" required="required" />
-            <input type="text" name="ExerciseAngina" placeholder="Exercise Angina" required="required" />
-
-            <input type="text" name="Oldpeak" placeholder="Oldpeak" required="required" />
-            <input type="text" name="ST_Slope" placeholder="ST Slope" required="required" />
+            <table>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" name="Age" placeholder="[years]" required="required" /></td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        <select name="Sex" placeholder="Sex" required="required">
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Chest Pain Type</td>
+                    <td>
+                        <select name="ChestPainType" placeholder="Chest Pain Type" required="required">
+                            <option value="TA">Typical Angina</option>
+                            <option value="ATA">Atypical Angina</option>
+                            <option value="NAP">Non-Anginal Pain</option>
+                            <option value="ASY">Asymptomatic</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Resting BP</td>
+                    <td><input type="text" name="RestingBP" placeholder="[mm Hg]" required="required" /></td>
+                </tr>
+                <tr>
+                    <td>Cholesterol</td>
+                    <td><input type="text" name="Cholesterol" placeholder="[mm/dl]" required="required" /></td>
+                </tr>
+                <tr>
+                    <td>Fasting Blood Sugar</td>
+                    <td><input type="text" name="FastingBS" placeholder="[mg/dl]" required="required" /></td>
+                </tr>
+                <tr>
+                    <td>Resting Electrocardiogram Results</td>
+                    <td>
+                        <select name="RestingECG" placeholder="Resting Electrocardiogram Results" required="required">
+                            <option value="Normal">Normal</option>
+                            <option value="ST">Have ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+                            <option value="LVH">Probable or definite Left Ventricular Hypertrophy by Estes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Max Heart-Rate</td>
+                    <td><input type="text" name="MaxHR" placeholder="max Heart Rate between 60 and 202" required="required" /></td>
+                </tr>
+                <tr>
+                    <td>Exercise-Induced Angina</td>
+                    <td>
+                        <select name="ExerciseAngina" placeholder="Exercise-Induced Angina" required="required">
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oldpeak</td>
+                    <td><input type="text" name="Oldpeak" placeholder="[depressions]" required="required" /></td>
+                </tr>
+                <tr>
+                    <td>Slope of the peak exercise ST segment</td>
+                    <td>
+                        <select name="ST_Slope" placeholder="Slope of the peak exercise ST segment" required="required">
+                            <option value="Up">Upsloping</option>
+                            <option value="Flat">Flat</option>
+                            <option value="Down">Downsloping</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
