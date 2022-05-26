@@ -1,0 +1,8 @@
+pip
+Flask
+numpy
+pandas
+gunicorn
+lightgbm
+sklearn
+xgboost
