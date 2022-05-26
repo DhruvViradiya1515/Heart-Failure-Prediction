@@ -9,14 +9,14 @@ This is our final group project for PRML Course on complete Machine Learning Pip
 
 ### Prerequisites
 You must have following packages installed :
-1. sklearn v1.0.2
-2. pandas v1.2.3
-3. numpy v1.19.5
-4. matplotlib v3.3.4
-5. seaborn v0.11.2
-6. xgboost v1.5.2 [!important : use 1.5.x versions]
-7. lightgbm v3.3.2
-7. flask v2.1.2
+1. sklearn
+2. pandas
+3. numpy
+4. gunicorn
+5. matplotlib
+6. xgboost
+7. lightgbm
+7. Flask
 
 ### Deployment Structure
 It has three major parts :
