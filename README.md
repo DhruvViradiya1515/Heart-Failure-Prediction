@@ -3,7 +3,7 @@ This is our final group project for PRML Course on complete Machine Learning Pip
 
 > Dataset : [heart failure dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
-> Deployed Website : [link](https://heart-failure-pred0.herokuapp.com/predict)
+> Deployed Website : [link](https://heart-failure-pred0.herokuapp.com)
 
 ## **Model Deployment**
 
