@@ -3,6 +3,8 @@ This is our final group project for PRML Course on complete Machine Learning Pip
 
 > Dataset : [heart failure dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
+> Deployed Website : [link](https://heart-failure-pred0.herokuapp.com/predict)
+
 ## **Model Deployment**
 
 ### Prerequisites
@@ -41,7 +43,7 @@ By default, flask will run on port 5000.
 3. Navigate to URL http://localhost:5000
 
 You should be able to view the homepage as below :
-![alt text](./images/homepage.png)
+![alt text](./images/inputs.png)
 
 Enter valid numerical values in all 11 input boxes in following format:
 
@@ -50,7 +52,7 @@ Enter valid numerical values in all 11 input boxes in following format:
 * ChestPainType : chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]
 * RestingBP : resting blood pressure [float : mm Hg]
 * Cholesterol : serum cholesterol [float : mm/dl]
-* FastingBS : fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
+* FastingBS : fasting blood sugar [float : mg/dl]
 * RestingECG : resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
 * MaxHR : maximum heart rate achieved [Integer value between 60 and 202]
 * ExerciseAngina : exercise-induced angina [Y: Yes, N: No]
@@ -59,6 +61,6 @@ Enter valid numerical values in all 11 input boxes in following format:
 
 Now hit the Predict button.
 If everything goes well, you should  be able to see the following output on the HTML page!
-![alt text](./images/results.png)
+![alt text](./images/result.png)
 
 > Note : These steps are for deployment of model on localhost. You can also use Procfile to host it on Heroku Server.
