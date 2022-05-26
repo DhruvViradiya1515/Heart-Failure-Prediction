@@ -1,4 +1,4 @@
-## **Heart Failure Prediction**
+# **Heart Failure Prediction**
 This is our final group project for PRML Course on complete Machine Learning Pipeline implementation. We implemented a model using ensemble techniques which combines the predictions from five different models : LightGBM, Random Forest, XGBoost, Gradient Boosting and Gaussian Naïve Bayes.
 
 > Dataset : [heart failure dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
